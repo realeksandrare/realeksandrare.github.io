@@ -5,6 +5,7 @@
 	margin: 0;
 	padding: 0;
 }
+
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
@@ -19,10 +20,33 @@ body {
 	width: 100%;
 }
 
+.hidden {
+	visibility: hidden;
+}
+.active {
+	visibility: visible;
+}
+
 .header {
 	position: relative;
 	width: 100vw;
-	.navbar {
+
+	.burger-box {
+		&__bars {
+			display: flex;
+			position: absolute;
+			top: 5%;
+			right: 10%;
+			transform: translate(-10%, -5%);
+
+			&-btn {
+				font-size: 2.2rem;
+				background: none;
+				border: 1px solid transparent;
+			}
+		}
+	}
+	.navbar-desktop {
 		display: flex;
 		justify-content: space-around;
 		width: 100%;
@@ -33,6 +57,7 @@ body {
 			font-size: 3.2rem;
 		}
 		&__link {
+			display: none;
 			margin-right: 2rem;
 			text-decoration: none;
 			color: #000;
@@ -60,25 +85,26 @@ body {
 				z-index: -5;
 			}
 		}
-			&__text {
-				display: flex;
-				justify-content: center;
-				align-items: flex-start;
-				flex-direction: column;
-				height: 100%;
-				padding: 2rem 2rem;
-				margin-left: 6rem;
+		&__text {
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+			flex-direction: column;
+			height: 100%;
+			padding: 2rem 2rem;
+			margin-left: 6rem;
 
-				&-company {
-					font-weight: 200;
-					color: whitesmoke;
-					font-size: 1.8rem;
-				}
-				&-title {
-					color: whitesmoke;
-					font-size: 2.8rem;
-				}
+			&-company {
+				font-weight: 200;
+				color: whitesmoke;
+				font-size: 1.8rem;
 			}
-		
+			&-title {
+				color: whitesmoke;
+				font-size: 2.8rem;
+			}
+		}
 	}
 }
+
+@import './medium';
