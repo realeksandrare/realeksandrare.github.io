@@ -58,21 +58,21 @@ body {
 		}
 		&__link {
 			display: none;
-			margin-right: 2rem;
+			padding:  1.6rem 2rem;
 			text-decoration: none;
 			color: #000;
 			justify-self: space-around;
-			font-size: 2.6rem;
+			font-size: 1.8rem;
 		}
 	}
 	.hero {
 		&__bg {
 			position: relative;
 			width: 100%;
-			height: 50rem;
+			height: 45rem;
 			background-image: url(/src/img/forest-desktop.jpg);
 			background-size: cover;
-			background-position: center;
+			background-position: 50% 70%;
 			z-index: -10;
 
 			&-shadow {
@@ -80,7 +80,7 @@ body {
 				top: 0;
 				left: 0;
 				width: 100%;
-				height: 50rem;
+				height: 45rem;
 				background-color: rgba(0, 0, 0, 0.6);
 				z-index: -5;
 			}
@@ -91,8 +91,7 @@ body {
 			align-items: flex-start;
 			flex-direction: column;
 			height: 100%;
-			padding: 2rem 2rem;
-			margin-left: 6rem;
+			padding: 1rem 3.5rem;
 
 			&-company {
 				font-weight: 200;
@@ -107,4 +106,44 @@ body {
 	}
 }
 
+.about-us {
+	&__heading {
+		padding: 5rem 4rem;
+		font-size: 2.8rem;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 400;
+	}
+	&__text {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 1fr, 0.5fr, 1fr;
+		padding: 0 3.2rem;
+
+		&-title {
+			grid-column: 1/3;
+			grid-row: 2/3;
+			font-size: 1.8rem;
+			padding: 1.6rem 0;
+		}
+
+		&-description {
+			grid-column: 1/3;
+			grid-row: 3/4;
+			font-size: 1.4rem;
+			line-height: 2rem;
+		}
+
+		&-photo {
+			grid-column: 1/3;
+			width: 100%;
+			grid-row: 1/2;
+		}
+	}
+}
+
+@import './small';
+
 @import './medium';
+
+@import './large';

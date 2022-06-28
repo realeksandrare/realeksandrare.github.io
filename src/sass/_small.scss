@@ -1,3 +1,27 @@
-@media(min-width: 576px){
-    
+@media (min-width: 576px) {
+	.header {
+		.hero {
+			&__text {
+				padding: 1rem 6rem;
+				&-company {
+					font-size: 2.2rem;
+				}
+				&-title {
+					font-size: 3.2rem;
+				}
+			}
+		}
+	}
+    .about-us{
+        &__text{
+            padding: 0 4.4rem;
+            &-title{
+                font-size: 2.2rem;
+                padding: 1.8rem 0;
+            }
+            &-description{
+                font-size: 1.6rem;
+            }
+        }
+    }
 }

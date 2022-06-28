@@ -9,4 +9,20 @@
             display: none;
         }
 	}
+    .about-us{
+        &__heading{
+            font-size: 3.2rem;
+        }
+        &__text{
+            padding: 0 8.4rem;
+            &-title{
+                font-size: 2.4rem;
+                padding: 1.8rem 0;
+            }
+            &-description{
+                font-size: 1.8rem;
+                line-height: 2.4rem;
+            }
+        }
+    }
 }
