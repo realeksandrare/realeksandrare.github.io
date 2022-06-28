@@ -24,4 +24,14 @@
             }
         }
     }
+    .adventure{
+
+        &__container{
+
+            &-text{
+                font-size: 2rem;
+                padding: 3rem 5rem;
+            }
+        }
+    }
 }

@@ -58,7 +58,7 @@ body {
 		}
 		&__link {
 			display: none;
-			padding:  1.6rem 2rem;
+			padding: 1.6rem 2rem;
 			text-decoration: none;
 			color: #000;
 			justify-self: space-around;
@@ -107,6 +107,7 @@ body {
 }
 
 .about-us {
+	margin-bottom: 5rem;
 	&__heading {
 		padding: 5rem 4rem;
 		font-size: 2.8rem;
@@ -138,6 +139,42 @@ body {
 			grid-column: 1/3;
 			width: 100%;
 			grid-row: 1/2;
+		}
+	}
+}
+
+.adventure {
+	position: relative;
+	background-image: url('/src/img/girl-mobile.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	object-fit: contain;
+	width: 100%;
+	height: 20rem;
+	z-index: -10;
+
+	&__shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 20, 0, 0.6);
+		z-index: -5;
+	}
+	&__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		color: white;
+		text-align: center;
+		padding: 0 3rem;
+		
+		&-text{
+			border: 1px solid whitesmoke;
+			padding: 2rem 4rem;
+			font-size: 1.6rem;
+
 		}
 	}
 }
