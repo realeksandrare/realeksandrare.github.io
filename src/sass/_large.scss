@@ -45,6 +45,44 @@ background-image: url("/src/img/girl-desktop.jpg");
             }
         }
     }
+
+    .offers{
+        &-offer{
+            font-size: 3.2rem;
+        }
+        &-text{
+            font-size: 1.8rem;
+        }
+        &-cards{
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr;
+            margin-top: 5rem;
+            padding: 0 4rem;
+            &__card{
+                width: 25rem;
+
+                &--first{
+                    grid-column: 1/2;
+                    grid-row: 1/2;
+                }
+                &--second{
+                    grid-column: 2/3;
+                    grid-row: 1/2;
+                }
+                &--third{
+                    grid-column: 3/4;
+                    grid-row: 1/2;
+                }
+
+                &-heading{
+                    font-size: 2.4rem;
+                }
+                &-price{
+                    font-size: 2.2rem;
+                }
+            }
+        }
+    }
 }
 
 
@@ -88,4 +126,19 @@ margin-left: 3rem;
                     }
                 }
             }
+            
+            .offers{
+                &-text{
+                    font-size: 2rem;
+                }
+                &-cards{
+                    padding: 0 6rem;
+                    gap: 1rem;
+
+                    &__card{
+                        width: 30rem;
+                    }
+                }
+            }
+            
 }

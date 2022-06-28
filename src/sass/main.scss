@@ -240,11 +240,11 @@ body {
 			&-heading {
 				font-weight: 400;
 				margin-top: 1.6rem;
-				font-size: 1.8rem;
+				font-size: 2rem;
 			}
 			&-price {
 				font-weight: 700;
-				font-size: 1.4rem;
+				font-size: 1.6rem;
 				padding: 1rem 0;
 			}
 			&-icon {
@@ -265,6 +265,39 @@ body {
 				&-highlighted {
 					background-color: rgba(13, 202, 35, 0.879);
 				}
+			}
+		}
+	}
+}
+
+.footer {
+	background-color: rgb(235, 229, 229);
+	&-grid-container {
+		padding: 5rem;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+
+
+		&__company {
+			grid-column: 1/4;
+			grid-row: 1/-7;
+			font-size: 3.2rem;
+			justify-self: center;
+		}
+		&__category {
+			&--aboutus {
+				grid-column: 4/5;
+			}
+			&--company {
+				grid-column: 5/6;
+			}
+			&--docs {
+				grid-column: 6/7;
+			}
+
+			&-link{
+				text-decoration: none;
+				color: black;
 			}
 		}
 	}
