@@ -16,24 +16,24 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="#home">
 
         <nav class="navbar-desktop">
     <p class="navbar-desktop__name"><i class="fas fa-tree"></i> Forest</p>
 
     <div class="burger-box">
-        <div class="burger-box__bars"> <button class="burger-box__bars-btn">
+        <div class="burger-box__bars"> <button class="burger-box__bars-btn burger-box__bars-btn-hamburger active">
                 <i class="fa-solid fa-bars"></i></button>
-            <button class="burger-box__bars-btn hidden">
+            <button class="burger-box__bars-btn burger-box__bars-btn-exit hidden">
                 <i class="fas fa-x"></i></button>
         </div>
     </div>
 
     <div>
         <a href="#home" class="navbar-desktop__link">Home</a>
-        <a href="#onas" class="navbar-desktop__link">O nas</a>
-        <a href="#oferta" class="navbar-desktop__link">Oferta</a>
-        <a href="#kontakt" class="navbar-desktop__link">Kontakt</a>
+        <a href="#aboutus" class="navbar-desktop__link">O nas</a>
+        <a href="#offer" class="navbar-desktop__link">Oferta</a>
+        <a href="#contact" class="navbar-desktop__link">Kontakt</a>
     </div>
 </nav>
 
@@ -49,9 +49,17 @@
             </div>
 
         </div>
+        <div class="mobile-menu">
+            <div class="header__menu">
+                <a href="#home" class="header__menu-link header__menu-link--first">Home</a>
+                <a href="#aboutus" class="header__menu-link header__menu-link--second">O nas</a>
+                <a href="#offer" class="header__menu-link header__menu-link--third">Oferta</a>
+                <a href="#contact" class="header__menu-link header__menu-link--fourth">Kontakt</a>
+            </div>
+        </div>
     </header>
     <main>
-        <section class="about-us">
+        <section class="about-us" id="aboutus">
             <div class="wrapper">
                 <h2 class="about-us__heading">o nas</h2>
                 <div class="about-us__text">
@@ -71,7 +79,6 @@
         </section>
 
         <section class="adventure">
-            <!-- <div class="adventure__bg"> -->
             <div class="adventure__shadow"></div>
             <div class="adventure__container">
                 <p class="adventure__container-text">Przygoda dla całej rodziny</p>
@@ -79,7 +86,7 @@
 
             </div>
         </section>
-        <section class="offers">
+        <section class="offers" id="offer">
             <h2 class="offers-offer">oferty</h2>
             <p class="offers-text">Wybierz jedną z naszych wspaniałych ofert!</p>
             <div class="wrapper">
@@ -159,7 +166,7 @@
 
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="contact">
     <div class="footer-box">
 
         <p class="footer-box__company"><i class="fas fa-tree"></i> Forest</p>
@@ -194,7 +201,7 @@
     <hr>
     <p class="footer__bottom-text"> &reg; <span class="currentYear">2022</span>Forest Group Company Ltd.</p>
 </footer>
-
+    <script async src="/src/js/main.js"></script>
 </body>
 
 </html>

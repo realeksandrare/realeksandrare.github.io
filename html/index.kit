@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="#home">
 
         <!-- @include 'nav.kit'-->
 
@@ -26,9 +26,17 @@
             </div>
 
         </div>
+        <div class="mobile-menu">
+            <div class="header__menu">
+                <a href="#home" class="header__menu-link header__menu-link--first">Home</a>
+                <a href="#aboutus" class="header__menu-link header__menu-link--second">O nas</a>
+                <a href="#offer" class="header__menu-link header__menu-link--third">Oferta</a>
+                <a href="#contact" class="header__menu-link header__menu-link--fourth">Kontakt</a>
+            </div>
+        </div>
     </header>
     <main>
-        <section class="about-us">
+        <section class="about-us" id="aboutus">
             <div class="wrapper">
                 <h2 class="about-us__heading">o nas</h2>
                 <div class="about-us__text">
@@ -48,7 +56,6 @@
         </section>
 
         <section class="adventure">
-            <!-- <div class="adventure__bg"> -->
             <div class="adventure__shadow"></div>
             <div class="adventure__container">
                 <p class="adventure__container-text">Przygoda dla całej rodziny</p>
@@ -56,7 +63,7 @@
 
             </div>
         </section>
-        <section class="offers">
+        <section class="offers" id="offer">
             <h2 class="offers-offer">oferty</h2>
             <p class="offers-text">Wybierz jedną z naszych wspaniałych ofert!</p>
             <div class="wrapper">
@@ -137,7 +144,7 @@
     </main>
 
     <!-- @include "footer.kit"-->
-
+    <script async src="/src/js/main.js"></script>
 </body>
 
 </html>

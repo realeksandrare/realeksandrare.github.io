@@ -11,12 +11,14 @@
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
+
 }
 body {
 	font-family: 'Hind', sans-serif;
 	font-family: 'Montserrat', sans-serif;
 	background-color: utilities.$base-color;
 	color: utilities.$text-color;
+	transform: translateZ(-1px);
 }
 .wrapper {
 	margin: 0 auto;
@@ -31,11 +33,16 @@ body {
 	visibility: visible;
 }
 
+.mobile-menu{
+	display: none;
+}
+
 .header {
 	position: relative;
 	width: 100%;
 
 	.burger-box {
+		z-index: 200;
 		&__bars {
 			display: flex;
 			position: absolute;
@@ -44,9 +51,19 @@ body {
 			transform: translate(-10%, -5%);
 
 			&-btn {
+				position: relative;
 				font-size: 2.2rem;
 				background: none;
 				border: 1px solid transparent;
+				
+				&-hamburger{
+					position: relative;
+				}
+				&-exit{
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
 			}
 		}
 	}
@@ -56,6 +73,7 @@ body {
 		width: 100%;
 		padding: 2rem 2rem;
 		align-items: center;
+		background-color: utilities.$white;
 
 		&__name {
 			font-size: 3.2rem;
@@ -66,8 +84,44 @@ body {
 			padding: 1.6rem 2rem;
 			justify-self: space-around;
 			font-size: 1.8rem;
-			color: utilities.$text-color;
+			color: utilities.$black;
 			text-decoration: none;
+		}
+	}
+
+	&__menu{
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(8, 1fr);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+		letter-spacing: .2rem;
+		z-index: 100;
+
+
+		&-link{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 1.6rem;
+			color: utilities.$black;
+			text-decoration: none;
+			&--first{
+				grid-row: 3/4;
+			}
+			&--second{
+				grid-row: 4/5;
+			}
+			&--third{
+				grid-row: 5/6;
+			}
+			&--fourth{
+				grid-row: 6/7;
+			}
 		}
 	}
 	.hero {
@@ -331,7 +385,12 @@ body {
 			&-link {
 				text-decoration: none;
 				font-size: 1.4rem;
+				color: utilities.$text-color;
 				line-height: 2rem;
+				transition: color .3s;
+				&:hover{
+					color: utilities.$gray;
+				}
 			}
 			&-li {
 				list-style: none;
