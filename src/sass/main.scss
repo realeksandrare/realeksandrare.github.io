@@ -223,6 +223,7 @@ body {
 			width: 25rem;
 			box-shadow: 0 0 5px gray;
 			border-radius: 5px;
+			
 			&--first,
 			&--second,
 			&--third {
@@ -253,7 +254,7 @@ body {
 			&-btn {
 				cursor: pointer;
 				background: none;
-				background-color: white;
+				background-color: whitesmoke;
 				border: none;
 				width: 15rem;
 				align-self: center;
@@ -262,8 +263,15 @@ body {
 				margin-top: 1.8rem;
 				margin-bottom: 3rem;
 				box-shadow: -2px 3px 15px gray;
+				transition: background-color .3s;
+				&:hover{
+					background-color: rgba(0, 0, 0, 0.1);
+				}
 				&-highlighted {
-					background-color: rgba(13, 202, 35, 0.879);
+					background-color: rgba(18, 188, 38, 0.879);
+					&:hover{
+						background-color: rgba(14, 170, 32, 0.9);
+					}
 				}
 			}
 		}

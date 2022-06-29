@@ -46,7 +46,10 @@
                 font-size: 1.5rem;
             }
             &__card{
-
+                transition: transform .3s;
+                &:hover{
+                    transform: scale(.95);
+                }
                 &--first{
                     grid-column: 1/2;
                     grid-row: 1/2;
