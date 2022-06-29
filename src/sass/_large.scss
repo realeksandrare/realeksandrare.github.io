@@ -83,6 +83,12 @@ background-image: url("/src/img/girl-desktop.jpg");
             }
         }
     }
+
+    .footer{
+        &-box{
+            grid-template-columns: 1fr .5fr .5fr .5fr;
+        }
+    }
 }
 
 

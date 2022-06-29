@@ -71,4 +71,17 @@
             }
         }
     }
+
+    .footer{
+        &-box{
+padding: 5rem;
+            &__category{
+                margin-right: 1rem;
+                &-heading{
+                    font-size: 1.8rem;
+
+                }
+            }
+        }
+    }
 }

@@ -12,32 +12,60 @@
 			}
 		}
 	}
-    .about-us{
-        &__text{
-            padding: 0 4.4rem;
-            &-title{
-                font-size: 2.2rem;
-                padding: 1.8rem 0;
-            }
-            &-description{
-                font-size: 1.6rem;
-            }
-        }
-    }
-    .adventure{
+	.about-us {
+		&__text {
+			padding: 0 4.4rem;
+			&-title {
+				font-size: 2.2rem;
+				padding: 1.8rem 0;
+			}
+			&-description {
+				font-size: 1.6rem;
+			}
+		}
+	}
+	.adventure {
+		&__container {
+			&-text {
+				font-size: 2rem;
+				padding: 3rem 5rem;
+			}
+		}
+	}
 
-        &__container{
+	.offers {
+		&-cards {
+			gap: 2.5rem;
+		}
+	}
 
-            &-text{
-                font-size: 2rem;
-                padding: 3rem 5rem;
-            }
-        }
-    }
-    
-    .offers{
-        &-cards{
-            gap: 2.5rem;
-        }
-    }
+	.footer {
+		&-box {
+			display: grid;
+			grid-template-columns: repeat(4, .5fr);
+			grid-template-rows: 1fr;
+			gap: 0rem;
+			padding: 5rem 1.5rem;
+
+			&__company {
+				grid-column: 1/2;
+				grid-row: 1/2;
+				font-size: 3.2rem;
+				justify-self: center;
+			}
+			&__category {
+				grid-row: 1/3;
+				text-align: left;
+				&--aboutus {
+					grid-column: 2/3;
+				}
+				&--company {
+					grid-column: 3/4;
+				}
+				&--docs {
+					grid-column: 4/5;
+				}
+			}
+		}
+	}
 }
