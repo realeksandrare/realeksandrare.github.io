@@ -15,82 +15,81 @@
 				grid-row: 1/2;
 				font-size: 2.2rem;
 				margin-left: 4rem;
-                padding: 0 2rem;
+				padding: 0 2rem;
 			}
 			&-description {
 				grid-column: 2/3;
 				grid-row: 2/3;
 				font-size: 1.6rem;
-                padding: 0 2rem;
+				padding: 0 2rem;
 				margin-left: 4rem;
-                line-height: 3rem;
+				line-height: 3rem;
 			}
 			&-photo {
 				grid-column: 1/2;
 				grid-row: 1/3;
-                // padding: 0 0rem;
-                height: 100%;
-                object-fit: contain;			}
+				height: 100%;
+				object-fit: contain;
+			}
 		}
 	}
-    .adventure{
-height: 30rem;
-background-image: url("/src/img/girl-desktop.jpg");
-        &__container{
+	.adventure {
+		height: 30rem;
+		background-image: url('/src/img/girl-desktop.jpg');
+		&__container {
+			&-text {
+				font-size: 2.6rem;
+				letter-spacing: 0.2rem;
+				padding: 4rem 9rem;
+			}
+		}
+	}
 
-            &-text{
-                font-size: 2.6rem;
-                letter-spacing: .2rem;
-                padding: 4rem 9rem;
-            }
-        }
-    }
+	.offers {
+		&-offer {
+			font-size: 3.2rem;
+		}
+		&-text {
+			font-size: 1.8rem;
+		}
+		&-cards {
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: 1fr;
+			margin-top: 5rem;
+			padding: 0 4rem;
+			&__card {
+				width: 25rem;
+                box-shadow: 0 0 20px utilities.$gray;;
 
-    .offers{
-        &-offer{
-            font-size: 3.2rem;
-        }
-        &-text{
-            font-size: 1.8rem;
-        }
-        &-cards{
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: 1fr;
-            margin-top: 5rem;
-            padding: 0 4rem;
-            &__card{
-                width: 25rem;
+				&--first {
+					grid-column: 1/2;
+					grid-row: 1/2;
+				}
+				&--second {
+					grid-column: 2/3;
+					grid-row: 1/2;
+				}
+				&--third {
+					grid-column: 3/4;
+					grid-row: 1/2;
+				}
 
-                &--first{
-                    grid-column: 1/2;
-                    grid-row: 1/2;
-                }
-                &--second{
-                    grid-column: 2/3;
-                    grid-row: 1/2;
-                }
-                &--third{
-                    grid-column: 3/4;
-                    grid-row: 1/2;
-                }
+				&-heading {
+					font-size: 2.4rem;
+				}
+				&-price {
+					font-size: 2.2rem;
+				}
+			}
+		}
+	}
 
-                &-heading{
-                    font-size: 2.4rem;
-                }
-                &-price{
-                    font-size: 2.2rem;
-                }
-            }
-        }
-    }
-
-    .footer{
-        &-box{
-            grid-template-columns: 1fr .5fr .5fr .5fr;
-        }
-    }
+	.footer {
+		&-box {
+			grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr;
+		}
+	}
 }
-
 
 @media (min-width: 1200px) {
 	.header {
@@ -106,45 +105,48 @@ background-image: url("/src/img/girl-desktop.jpg");
 		}
 	}
 
-    .about-us{
-        &__text{
-            &-title{
-margin-left: 3rem;
-            }
-            &-description{
-margin-left: 3rem;
-            }
-            &-photo{
-                height: 85%;
-            }
-        }
-    }
+	.about-us {
+		&__text {
+			&-title {
+				margin-left: 3rem;
+			}
+			&-description {
+				margin-left: 3rem;
+			}
+			&-photo {
+				height: 85%;
+			}
+		}
+	}
 
-    .adventure{
-        height: 30rem;
-        background-image: url("/src/img/girl-desktop.jpg");
-                &__container{
-        
-                    &-text{
-                        font-size: 3.2rem;
-                        letter-spacing: .3rem;
-                        padding: 4rem 12rem;
-                    }
-                }
-            }
-            
-            .offers{
-                &-text{
-                    font-size: 2rem;
-                }
-                &-cards{
-                    padding: 0 6rem;
-                    gap: 1rem;
+	.adventure {
+		height: 30rem;
+		background-image: url('/src/img/girl-desktop.jpg');
+		&__container {
+			&-text {
+				font-size: 3.2rem;
+				letter-spacing: 0.3rem;
+				padding: 4rem 12rem;
+			}
+		}
+	}
 
-                    &__card{
-                        width: 30rem;
-                    }
-                }
-            }
-            
+	.offers {
+		&-text {
+			font-size: 2rem;
+		}
+		&-cards {
+			padding: 0 6rem;
+			gap: 1rem;
+
+			&__card {
+				width: 30rem;
+			}
+		}
+	}
+	.footer {
+		&-box {
+			padding: 5rem 8rem;
+		}
+	}
 }

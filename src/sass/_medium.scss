@@ -41,11 +41,12 @@
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 1fr);
             gap: 3rem;
-            margin-top: 3rem;
+            margin-top: 3.5rem;
             &-option{
                 font-size: 1.5rem;
             }
             &__card{
+                box-shadow: 0 0 15px utilities.$gray;
                 transition: transform .3s;
                 &:hover{
                     transform: scale(.95);
