@@ -32,13 +32,23 @@ body {
 	visibility: visible;
 }
 
-.mobile-menu {
-	display: none;
+@keyframes linksAnimation {
+	from{
+		transform: translateY(200%);
+	}
+	to{
+		transform: translateY(0);
+	}
 }
 
+.links-animation{
+	animation: linksAnimation 1s both;
+}
 .header {
 	position: relative;
 	width: 100%;
+	height: 100vh;
+	overflow: hidden;
 
 	.burger-box {
 		z-index: 200;
@@ -87,7 +97,6 @@ body {
 			text-decoration: none;
 		}
 	}
-
 	&__menu {
 		display: grid;
 		grid-template-columns: 1fr;
@@ -97,9 +106,15 @@ body {
 		left: 0;
 		width: 100vw;
 		height: 100vh;
+		transform: translateX(100%);
+		transition: transform .5s;
 		background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 		letter-spacing: 0.2rem;
+		overflow: hidden;
 		z-index: 100;
+		&--active {
+			transform: translateX(0);
+		}
 
 		&-link {
 			position: relative;
@@ -131,7 +146,7 @@ body {
 				width: 5rem;
 				height: 100%;
 				border-bottom: 2px solid utilities.$white;
-				transition: transform .3s;
+				transition: transform 0.3s;
 			}
 			&::after {
 				position: absolute;
@@ -141,10 +156,11 @@ body {
 				width: 5rem;
 				height: 100%;
 				border-bottom: 2px solid utilities.$white;
-				transition: transform .3s;
+				transition: transform 0.3s;
 			}
-			&:hover::before, &:hover::after{
-				transform:scaleX(2)
+			&:hover::before,
+			&:hover::after {
+				transform: scaleX(2);
 			}
 		}
 	}
@@ -152,10 +168,10 @@ body {
 		&__bg {
 			position: relative;
 			width: 100%;
-			height: 45rem;
+			height: 100vh;
 			background-image: url(/src/img/forest-desktop.jpg);
 			background-size: cover;
-			background-position-y: 70%;
+			background-position: center;
 			z-index: -10;
 
 			&-shadow {
@@ -163,7 +179,7 @@ body {
 				top: 0;
 				left: 0;
 				width: 100%;
-				height: 45rem;
+				height: 100vh;
 				background-color: utilities.$shadow1;
 				z-index: -5;
 			}
