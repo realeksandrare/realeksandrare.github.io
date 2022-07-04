@@ -33,15 +33,15 @@ body {
 }
 
 @keyframes linksAnimation {
-	from{
+	from {
 		transform: translateY(200%);
 	}
-	to{
+	to {
 		transform: translateY(0);
 	}
 }
 
-.links-animation{
+.links-animation {
 	animation: linksAnimation 1s both;
 }
 .header {
@@ -109,7 +109,7 @@ body {
 		width: 100vw;
 		height: 100vh;
 		transform: translateX(100%);
-		transition: transform .5s;
+		transition: transform 0.5s;
 		background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 		letter-spacing: 0.2rem;
 		overflow: hidden;
@@ -171,10 +171,15 @@ body {
 			position: relative;
 			width: 100%;
 			height: 100vh;
-			background-image: url(/src/img/forest-desktop.jpg);
 			background-size: cover;
 			background-position: center;
 			z-index: -10;
+			&--first {
+				background-image: url(/src/img/forest-mobile.jpg);
+			}
+			&--second {
+				background-image: url(/src/img/trees-mobile.jpg);
+			}
 
 			&-shadow {
 				position: absolute;
@@ -304,13 +309,13 @@ body {
 		font-size: 1.6rem;
 		padding: 0 2rem;
 		margin-bottom: 2.2rem;
-		&-link{
+		&-link {
 			position: relative;
 			color: utilities.$btn-hover-highlighted;
 			font-weight: 700;
 			text-decoration: none;
 			z-index: 0;
-			&::after{
+			&::after {
 				content: '';
 				position: absolute;
 				bottom: 0;
@@ -318,13 +323,13 @@ body {
 				height: 0;
 				width: 100%;
 				background-color: utilities.$btn-hover-highlighted;
-				transition: height .3s;
+				transition: height 0.3s;
 				z-index: -1;
 			}
-			&:hover{
+			&:hover {
 				color: utilities.$text-color;
 			}
-			&:hover::after{
+			&:hover::after {
 				height: 100%;
 			}
 		}
@@ -476,6 +481,148 @@ body {
 		}
 	}
 }
+
+// Podstrona Oferty
+// --------------------------------------
+.offer {
+	&__title {
+		letter-spacing: 0.2rem;
+		color: utilities.$white;
+		font-size: 3rem;
+		text-align: center;
+		padding: 6rem 0;
+	}
+	&__text {
+		display: flex;
+		justify-content: center;
+		color: utilities.$footer-background;
+		font-size: 1.6rem;
+		text-align: center;
+		padding: 0 3rem;
+		margin-bottom: 2rem;
+		font-family: 'hind', sans-serif;
+
+		&--second {
+			margin-top: -1.2rem;
+		}
+		&-colored {
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 0.1rem;
+			color: utilities.$accent-color;
+			margin: 2rem 0;
+			padding: 0 1.5rem;
+		}
+	}
+	&__hero {
+		position: relative;
+		width: 100%;
+		height: 100vh;
+		background-position-y: top;
+		background-repeat: no-repeat;
+		background-size: cover;
+		object-fit: contain;
+		z-index: -10;
+
+		&-shadow {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: utilities.$shadow1;
+			z-index: -5;
+		}
+	}
+}
+
+.options {
+	width: 100%;
+	height: 100%;
+	padding: 4rem 0rem;
+	overflow: hidden;
+
+	&__text {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: auto;
+		justify-content: center;
+		padding: 3rem 4rem;
+		&-heading,
+		&-description {
+			padding: 0 3rem;
+		}
+		&-heading {
+			font-size: 1.8rem;
+		}
+		&-description {
+			font-size: 1.6rem;
+			margin: 2rem 0;
+
+		}
+
+		&-btn {
+			position: relative;
+			background: none;
+			cursor: pointer;
+			padding: 1rem 2rem;
+			margin: 2rem;
+			border: 1px solid utilities.$black;
+			width: 10rem;
+			justify-self: flex-end;
+			background-color: utilities.$white;
+			letter-spacing: .1rem;
+			transition: color 0.3s;
+			&::before {
+				content: '';
+				position: absolute;
+				border: 1px solid black;
+				top: 0.3rem;
+				left: 0.3rem;
+				width: 105%;
+				height: 110%;
+			}
+			&:hover {
+				color: utilities.$btn-hover-highlighted;
+			}
+		}
+		&-img {
+			width: 100vw;
+			object-fit: contain;
+			margin-top: 2rem;
+		}
+
+		.fa-solid {
+			margin-right: 1rem;
+		}
+	}
+}
+
+
+
+
+// AOS
+// ----------------------------------------------------
+[data-aos="slide-from-right"] {
+	@media screen and (min-width: 768px) {
+	  transform: translateX(300px);
+  
+	  &.aos-animate {
+		transform: translateX(0);
+	  }
+	}
+  }
+
+  [data-aos="slide-from-left"] {
+	@media screen and (min-width: 768px) {
+	  transform: translateX(-200px);
+  
+	  &.aos-animate {
+		transform: translateX(0);
+	  }
+	}
+  }
 
 @import './small';
 
