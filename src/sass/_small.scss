@@ -8,6 +8,9 @@
 				&--second {
 					background-image: url('/src/img/trees-desktop.jpg');
 				}
+				&--third{
+					background-image: url('/src/img/sky-desktop.jpg');
+				}
 				&__text {
 					padding: 1rem 6rem;
 					&-company {
@@ -96,6 +99,13 @@
 					height: 80%;
 				}
 			}
+		}
+	}
+
+	.contact{
+		&__main{
+			width: 40rem;
+		margin: 0 auto;
 		}
 	}
 }

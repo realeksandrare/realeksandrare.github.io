@@ -50,4 +50,29 @@ const deleteLinksAnimation = () => {
 	})
 }
 
+const API_KEY = 'AIzaSyAF9Q8amBVF05M0WSlbfaazmOZBI8K8b24';
+const URL = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&callback=initMap`
+
+function initMap() {
+
+  const park = { lat: 53.473658, lng: 22.657368 };
+  // The map, centered at Uluru
+  const map = new google.maps.Map(document.querySelector('#map'), {
+    zoom: 10,
+    center: park,
+  });
+  // The marker, positioned at Uluru
+  const marker = new google.maps.Marker({
+    position: park,
+    map: map,
+  });
+}
+
+window.initMap = initMap;
+
+
+
+
+
+
 burgerBtn.addEventListener('click', handleMenu)
