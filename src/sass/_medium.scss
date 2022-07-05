@@ -150,6 +150,9 @@
 				height: 5rem;
 				align-self: end;
 				margin: 1.5rem 4rem;
+				&:hover{
+					animation: shake-top 2s;
+				}
 				&--family {
 					grid-column: 2/3;
 					grid-row: 1/2;
