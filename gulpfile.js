@@ -61,6 +61,8 @@ function startBrowserSync(done) {
 		server: {
 			baseDir: './',
 		},
+		online: true,
+    tunnel: true,
 	})
 	done()
 }

@@ -182,7 +182,7 @@ body {
 				background-image: url(/src/img/trees-mobile.jpg);
 			}
 			&--third {
-				background-image: url('/src/img/sky-mobile.jpg');
+				background-image: url('/src/img/contact-mobile.jpg');
 			}
 
 			&-shadow {
@@ -602,10 +602,41 @@ body {
 	}
 }
 
+// Podstrona Kontakt
+// ---------------------------------------------------------
+
 .contact {
-	&__text{
-		font-size: 1.8rem;
-		padding-top: 5rem;
+	&__title {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		font-size: 4rem;
+		color: utilities.$white;
+		letter-spacing: 0.5rem;
+
+		&::before,
+		&::after {
+			position: absolute;
+			content: '';
+			width: 40%;
+			height: 50%;
+			border-top: 1px solid utilities.$white;
+		}
+
+		&::before {
+			top: 25%;
+			left: 0;
+		}
+		&::after {
+			bottom: -25%;
+			right: 0;
+		}
+	}
+	&__text {
+		font-size: 2rem;
+		padding: 5rem 0;
 		text-align: center;
 		font-weight: 700;
 	}
@@ -615,16 +646,13 @@ body {
 		grid-template-rows: repeat(2, 1fr);
 		justify-content: center;
 		align-items: center;
-		background-color: utilities.$footer-background;
-		margin: 0 2rem;
-		box-shadow: 0 0 5px black inset;
 
 		&::before {
 			position: absolute;
 			content: '';
-			top: 0;
-			left: -0.6rem;
-			height: 100%;
+			top: -2rem;
+			left: 1.5rem;
+			height: 350%;
 			width: 1.2rem;
 			background-color: utilities.$accent-color;
 		}
@@ -655,32 +683,26 @@ body {
 	&__form {
 		display: grid;
 		grid-template-rows: repeat(2, 1fr);
-		padding: 5rem 0;
 		gap: 5rem;
+		overflow: hidden;
 
-		&-label,
 		&-input,
 		&-btn {
 			display: block;
 		}
-		&-label {
-			font-size: 1.6rem;
-			margin-bottom: 1rem;
-		}
+
 		&-input,
 		&-select {
-			margin-bottom: 2rem;
-			padding: 0.5rem 1rem;
+			padding: 0.5rem 2rem;
 		}
 		&-textarea {
-			padding: 1rem;
+			padding: 1rem 2rem;
 			resize: vertical;
 		}
 
 		&-btn {
 			position: relative;
 			cursor: pointer;
-			margin-top: 2rem;
 			padding: 1rem 2rem;
 			font-weight: 700;
 			background: none;
@@ -704,7 +726,7 @@ body {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			justify-content: space-around;
+			justify-content: space-evenly;
 		}
 
 		&-map {
@@ -730,7 +752,7 @@ body {
 
 [data-aos='slide-from-right-far'] {
 	@media screen and (min-width: 768px) {
-		transform: translateX(1200px);
+		transform: translateX(300%);
 
 		&.aos-animate {
 			transform: translateX(0);
@@ -740,7 +762,7 @@ body {
 
 [data-aos='slide-from-left'] {
 	@media screen and (min-width: 768px) {
-		transform: translateX(-200px);
+		transform: translateX(-300%);
 
 		&.aos-animate {
 			transform: translateX(0);
@@ -754,6 +776,16 @@ body {
 
 		&.aos-animate {
 			transform: translateX(0);
+		}
+	}
+}
+
+[data-aos="zoom-out-right"] {
+	@media screen and (min-width: 768px) {
+		transform: scale(2) translateX(-100px);
+
+		&.aos-animate {
+			transform: scale(1) translateX(0);
 		}
 	}
 }

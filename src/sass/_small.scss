@@ -9,7 +9,7 @@
 					background-image: url('/src/img/trees-desktop.jpg');
 				}
 				&--third{
-					background-image: url('/src/img/sky-desktop.jpg');
+					background-image: url('/src/img/contact-desktop.jpg');
 				}
 				&__text {
 					padding: 1rem 6rem;
@@ -103,9 +103,22 @@
 	}
 
 	.contact{
+
+		&__title{
+			font-size: 5rem;
+		}
+		&__text{
+			font-size: 2.4rem;
+			padding: 6rem 0;
+		}
 		&__main{
 			width: 40rem;
 		margin: 0 auto;
+		}
+		&__hq{
+			&-heading{
+				font-size: 2rem;
+			}
 		}
 	}
 }

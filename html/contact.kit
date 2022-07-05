@@ -15,54 +15,52 @@
         <div class="hero">
             <div class="hero__bg hero__bg--third">
                 <div class="hero__bg-shadow"></div>
-                <h1 class="offer__title">Kontakt</h1>
-
-                <div data-aos="fade-up-right" data-aos-duration="800" data-aos-easing="ease-in-out"
-                    class="contact__main">
-                    <div class="contact__hq">
-                        <h3 class="contact__hq-heading">nasza siedziba</h3>
-                        <p class="contact__hq-address"> Osowiec-Twierdza 10</p>
-                        <p class="contact__hq-address"> 19-410 Goniądz</p>
-                    </div>
-                    <div class="contact__data">
-                        <p class="contact__data-items"><i class="fa-solid fa-phone"></i> +22 999 786 576</p>
-                        <p class="contact__data-items"><i class="fa-solid fa-envelope"></i> kontakt@forest.pl</p>
-                    </div>
-
-                </div>
-
-
+                <h1 class="contact__title">Kontakt</h1>
             </div>
         </div>
     </header>
     <section class="contact">
         <div class="wrapper">
+
+
             <p class="contact__text">Skontaktuj się z nami! <i class="fa-regular fa-paper-plane"></i></p>
+            <div class="contact__main" data-aos="zoom-out-right" data-aos-duration="800" data-aos-easing="ease-in-out">
+                <div class="contact__hq">
+                    <h3 class="contact__hq-heading">nasza siedziba</h3>
+                    <p class="contact__hq-address"> Osowiec-Twierdza 10</p>
+                    <p class="contact__hq-address"> 19-410 Goniądz</p>
+                </div>
+                <div class="contact__data">
+                    <p class="contact__data-items"><i class="fa-solid fa-phone"></i> +22 999 786 576</p>
+                    <p class="contact__data-items"><i class="fa-solid fa-envelope"></i> kontakt@forest.pl</p>
+                </div>
+
+            </div>
+
             <form action="" class="contact__form">
-                <div data-aos='slide-from-left-far'
-                data-aos-duration="1500" data-aos-easing="ease-in-out" class="contact__form-right">
-                    <label for="name" class="contact__form-label">Twoje imię:</label>
-                    <input type="text" class="contact__form-input" id="name">
+                <div class="contact__form-right">
 
-                    <label for="email" class="contact__form-label">Adres e-mail:</label>
-                    <input type="email" class="contact__form-input" id="email">
+                    <input type="text" class="contact__form-input contact__form-input--name" id="name"
+                        placeholder="Twoje imię">
 
-                    <label for="subject" class="contact__form-label">Temat wiadomości:</label>
+                    <input type="email" class="contact__form-input contact__form-input--email" id="email"
+                        placeholder="Adres e-mail">
+
+
                     <select id="subject" class="contact__form-select">
-                        <option class="contact__form-option" value="0" disabled>--Wybierz kategorię--</option>
+                        <option class="contact__form-option" value="0">--Wybierz kategorię--</option>
                         <option class="contact__form-option" value="1">Zakup pakietu</option>
                         <option class="contact__form-option" value="2">Pytanie odnośnie oferty</option>
                         <option class="contact__form-option" value="3">Płatności</option>
                         <option class="contact__form-option" value="4">Inne</option>
                     </select>
-                    <label for="msg" class="contact__form-label">Wiadomość:</label>
-                    <textarea id="msg" class="contact__form-textarea"></textarea>
+
+                    <textarea id="msg" class="contact__form-textarea" placeholder="W czym możemy pomóc?"></textarea>
                     <button type="submit" class="contact__form-btn">Wyślij</button>
                 </div>
 
 
-                <div data-aos='slide-from-right-far' 
-                data-aos-duration="1500" data-aos-easing="ease-in-out" class="contact__form-map" id="map">
+                <div class="contact__form-map" id="map">
 
                 </div>
             </form>
