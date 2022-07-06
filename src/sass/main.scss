@@ -492,7 +492,7 @@ body {
 	&__title {
 		letter-spacing: 0.2rem;
 		color: utilities.$white;
-		font-size: 3rem;
+		font-size: 4rem;
 		text-align: center;
 		padding: 6rem 0;
 	}
@@ -500,11 +500,10 @@ body {
 		display: flex;
 		justify-content: center;
 		color: utilities.$footer-background;
-		font-size: 1.6rem;
+		font-size: 1.7rem;
 		text-align: center;
 		padding: 0 3rem;
 		margin-bottom: 2rem;
-		font-family: 'hind', sans-serif;
 
 		&--second {
 			margin-top: -1.2rem;
@@ -685,6 +684,7 @@ body {
 		grid-template-rows: repeat(2, 1fr);
 		gap: 5rem;
 		overflow: hidden;
+		margin-bottom: 4rem;
 
 		&-input,
 		&-btn {
@@ -697,7 +697,7 @@ body {
 		}
 		&-textarea {
 			padding: 1rem 2rem;
-			resize: vertical;
+			resize:none;
 		}
 
 		&-btn {
@@ -762,7 +762,7 @@ body {
 
 [data-aos='slide-from-left'] {
 	@media screen and (min-width: 768px) {
-		transform: translateX(-300%);
+		transform: translateX(-300px);
 
 		&.aos-animate {
 			transform: translateX(0);
