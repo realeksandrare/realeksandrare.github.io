@@ -32,6 +32,10 @@ body {
 	visibility: visible;
 }
 
+.body-hidden{
+	overflow: hidden;
+}
+
 @keyframes linksAnimation {
 	from {
 		transform: translateY(200%);
